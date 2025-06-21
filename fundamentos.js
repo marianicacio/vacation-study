@@ -50,3 +50,5 @@ console.log(objeto())
 
 const mostrarMensagem2 = (nome) => `Ola, ${nome}`
 console.log(mostrarMensagem2('maria'))
+
+//Manipulação de Array
