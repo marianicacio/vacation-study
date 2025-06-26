@@ -1,5 +1,7 @@
 //Variaveis
 
+const { act } = require("react")
+
 //variavel que varia
 let nome = "Maria"
 nome = "Carlos"
@@ -52,3 +54,14 @@ const mostrarMensagem2 = (nome) => `Ola, ${nome}`
 console.log(mostrarMensagem2('maria'))
 
 //Manipulação de Array
+
+const numeros = [2,3,4]
+
+const num = numeros.map(n => n *2) //dobra os valores da array
+console.log(num)
+
+const filtro = numeros.filter(n => n % 2 == 0) //trazer todos os pares, ele filtra os valores da array
+console.log(filtro)
+
+const soma = numeros.reduce((acc, val) => acc + val, 0); // 6
+console.log(soma)
