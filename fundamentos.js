@@ -54,7 +54,6 @@ const mostrarMensagem2 = (nome) => `Ola, ${nome}`
 console.log(mostrarMensagem2('maria'))
 
 //Manipulação de Array
-
 const numeros = [2,3,4]
 
 const num = numeros.map(n => n *2) //dobra os valores da array
@@ -65,3 +64,4 @@ console.log(filtro)
 
 const soma = numeros.reduce((acc, val) => acc + val, 0); // 6
 console.log(soma)
+
