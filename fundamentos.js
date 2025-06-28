@@ -1,7 +1,5 @@
 //Variaveis
 
-const { act } = require("react")
-
 //variavel que varia
 let nome = "Maria"
 nome = "Carlos"
@@ -63,5 +61,10 @@ const filtro = numeros.filter(n => n % 2 == 0) //trazer todos os pares, ele filt
 console.log(filtro)
 
 const soma = numeros.reduce((acc, val) => acc + val, 0); // 6
+
 console.log(soma)
+
+// Atividade 3 Manipular arrays
+
+const number = [1,2,3,4,5]
 
