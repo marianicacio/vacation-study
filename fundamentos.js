@@ -66,5 +66,16 @@ console.log(soma)
 
 // Atividade 3 Manipular arrays
 
-const number = [1,2,3,4,5]
+const number = [1,2,3,4,5,6]
 
+const dobrar = number.map(n => n * 2)
+console.log(dobrar)
+
+const impar = number.filter(n => n % 2)
+console.log(impar)
+
+const par = number.filter(n => n % 2 == 0)
+console.log(par)
+
+const somando = number.reduce((acc, val) => acc + val, 0)
+console.log(somando)
