@@ -79,3 +79,14 @@ console.log(par)
 
 const somando = number.reduce((acc, val) => acc + val, 0)
 console.log(somando)
+
+//Promises
+
+const promessa = new Promise((resolve, reject) => {
+    resolve("Deu certo")
+})
+
+console.log(promessa)
+
+.then(res => console.log(res))
+.catch(err => console.log(err))
