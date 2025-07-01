@@ -88,5 +88,19 @@ const promessa = new Promise((resolve, reject) => {
 
 console.log(promessa)
 
-.then(res => console.log(res))
-.catch(err => console.log(err))
+// .then(res => console.log(res))
+// .catch(err => console.log(err))
+
+//Atividade 4 Promises
+
+function carregarDados() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Dados Carregados")
+        }, 2000)
+    })
+}
+
+carregarDados()
+.then(resultado => console.log(resultado))
+.catch(erro => console.log(erro))
