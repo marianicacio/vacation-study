@@ -104,3 +104,32 @@ function carregarDados() {
 carregarDados()
 .then(resultado => console.log(resultado))
 .catch(erro => console.log(erro))
+
+//Async/await
+
+async function buscarDados() {
+    try {
+        const res = await fetch('https://jsonplaceholder.typicode.com/users')
+        const dados = await res.json()
+        console.log(dados)
+    } catch (erro) {
+        console.error("Erro:", erro)
+    }
+}
+
+buscarDados()
+
+async function buscarUsuario() {
+    try {
+        const resposta = await fetch('https://jsonplaceholder.typicode.com/users')
+        const usuario = await resposta.json()
+
+        usuario.forEach(usuario => {
+            console.log(usuario.name)
+        })
+    } catch (erro) {
+        console.error("Erro ao buscar usuario:", erro)
+    }
+}
+
+buscarUsuario()
