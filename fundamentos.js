@@ -133,3 +133,11 @@ async function buscarUsuario() {
 }
 
 buscarUsuario()
+
+document.getElementById("meuBotao").addEventListener("click", function() {
+    alert("Você clicou!")
+}) 
+
+document.addEventListener("botao").addEventListener("click", function() {
+    document.addEventListener("mensagem").innerText = "Você clicou"
+})
