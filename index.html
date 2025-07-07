@@ -19,7 +19,11 @@
     <button id="meuBotao">HERE!</button>
     <p id="mensagem">Clique no botão!</p>
     <button id="botao">Clique aqui!</button>
-    <script src="fundamentos.js"></script>
+    <script>
+        document.addEventListener("botao").addEventListener("click", function () {
+            document.addEventListener("mensagem").innerText = "Você clicou"
+        })
+    </script>
 </body>
 
 </html>
