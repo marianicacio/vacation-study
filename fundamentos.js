@@ -93,54 +93,60 @@ console.log(promessa)
 
 //Atividade 4 Promises
 
-function carregarDados() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("Dados Carregados")
-        }, 2000)
-    })
-}
+// function carregarDados() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Dados Carregados")
+//         }, 2000)
+//     })
+// }
 
-carregarDados()
-.then(resultado => console.log(resultado))
-.catch(erro => console.log(erro))
+// carregarDados()
+// .then(resultado => console.log(resultado))
+// .catch(erro => console.log(erro))
 
-//Async/await
+// //Async/await
 
-async function buscarDados() {
-    try {
-        const res = await fetch('https://jsonplaceholder.typicode.com/users')
-        const dados = await res.json()
-        console.log(dados)
-    } catch (erro) {
-        console.error("Erro:", erro)
-    }
-}
+// async function buscarDados() {
+//     try {
+//         const res = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const dados = await res.json()
+//         console.log(dados)
+//     } catch (erro) {
+//         console.error("Erro:", erro)
+//     }
+// }
 
-buscarDados()
+// buscarDados()
 
-async function buscarUsuario() {
-    try {
-        const resposta = await fetch('https://jsonplaceholder.typicode.com/users')
-        const usuario = await resposta.json()
+// async function buscarUsuario() {
+//     try {
+//         const resposta = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const usuario = await resposta.json()
 
-        usuario.forEach(usuario => {
-            console.log(usuario.name)
-        })
-    } catch (erro) {
-        console.error("Erro ao buscar usuario:", erro)
-    }
-}
+//         usuario.forEach(usuario => {
+//             console.log(usuario.name)
+//         })
+//     } catch (erro) {
+//         console.error("Erro ao buscar usuario:", erro)
+//     }
+// }
 
-buscarUsuario()
+// buscarUsuario()
 
-document.getElementById("meuBotao").addEventListener("click", function() {
-    alert("Você clicou!")
-}) 
+// document.getElementById("meuBotao").addEventListener("click", function() {
+//     alert("Você clicou!")
+// }) 
 
-document.addEventListener("botao").addEventListener("click", function() {
-    document.addEventListener("mensagem").innerText = "Você clicou"
-})
+// document.addEventListener("botao").addEventListener("click", function() {
+//     document.addEventListener("mensagem").innerText = "Você clicou"
+// })
 
 const num2 = [10, 20, 30, 40, 50]
 const metade = num2.map(n => n/2)
+const maiores = num2.filter(n => n > 25)
+const somandor = num2.reduce((acc, n) => acc + n, 0)
+
+console.log(metade)
+console.log(maiores)
+console.log(somandor)

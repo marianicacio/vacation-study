@@ -24,6 +24,26 @@
             document.addEventListener("mensagem").innerText = "Você clicou"
         })
     </script>
+    <form action="">
+        <input type="text" id="nome" placeholder="Digite um nome">
+        <button id="adicionar">Adicionar</button>
+        <ul id="lista"></ul>
+        <script>
+            const nomes = []
+            document.getElementById("adicionar").addEventListener("click", function() {
+                const nome = document.getElementById("nome").value
+                nomes.push(nome)
+                const nomesFiltrados = nomes.filter(n => n.length > 3)
+                const lista = document.getElementById("lista")
+                lista.innerHTML = ""
+                nomesFiltrados.forEach(n => {
+                    const li = document.createElement("li")
+                    li.innerText = n
+                    lista.appendChild(li)
+                })
+            })
+        </script>
+    </form>
 </body>
 
 </html>
