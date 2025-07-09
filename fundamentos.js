@@ -141,3 +141,6 @@ document.getElementById("meuBotao").addEventListener("click", function() {
 document.addEventListener("botao").addEventListener("click", function() {
     document.addEventListener("mensagem").innerText = "Você clicou"
 })
+
+const num2 = [10, 20, 30, 40, 50]
+const metade = num2.map(n => n/2)
