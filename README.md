@@ -1,3 +1,3 @@
 Repositorio para estudos na ferias
 javascript, react e angular
-so queria focar mais pra conseguir estudar 😑
+so queria focar mais pra conseguir estudar 😑me matei
