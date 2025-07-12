@@ -12,3 +12,15 @@ let total = 0
 function adicionar(x) {
     total+=x
 }
+
+export function subtracao(a,b) {
+    return a-b
+}
+
+export function multi(a,b) {
+    return a*b
+}
+
+export function divisao(a,b) {
+    return a/b
+}
