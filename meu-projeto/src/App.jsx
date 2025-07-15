@@ -1,14 +1,14 @@
 // import logo from './logo.svg';
+import Saldacao from './saldacao'
+import Saudacao2 from './saudacao2';
 import './App.css';
 
 function App() {
   return (
-    <body>
-      <header>
-        <h1>teste</h1>
-        <p>Ola mundo</p>
-      </header>
-    </body>
+    <div>
+      <Saldacao nome="maria"/>
+      <Saudacao2 nome="sla"/>
+    </div>
   );
 }
 
