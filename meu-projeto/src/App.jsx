@@ -4,16 +4,17 @@
 import Titulo from './titulo';
 import Usuario from './usuario';
 import Produto from './produto';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div>
-      <Titulo mensagem="suave"/>,
-      <Usuario nome="Maria" idade="17"/>,
-      <Produto nome="Corretivo Fran" preco="49,99"/>
-    </div>
-  );
+  const [contador, setContador] = useState(0)
+      return (
+          <div>
+          <p>Você clicou {contador} vezes</p>
+          <button onClick={() => setContador(contador + 1) }>Clique aqui</button>
+          </div>
+      )
 }
 
 export default App;
