@@ -16,22 +16,33 @@ function App() {
 //           </div>
 //       )
  
-    const [nome, setNome] = useState("")
-    const [email, setEmail] = useState("")
+    // const [nome, setNome] = useState("")
+    // const [email, setEmail] = useState("")
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        console.log("Nome: ", nome)
-        console.log("Email: ", email)
+    // function handleSubmit(e) {
+    //     e.preventDefault()
+    //     console.log("Nome: ", nome)
+    //     console.log("Email: ", email)
+    // }
+
+    // return (
+    //     <form onSubmit={handleSubmit}>
+    //         <input type="text" placeholder='nome' onChange={(e) => setNome(e.target.value)}/>
+    //         <input type="text" placeholder='E-mail' onChange={(e) => setEmail(e.target.value)}/>
+    //         <button type='submit'>Eviar</button>
+    //     </form>
+    // )
+    const frutas = ['maca', 'pera', 'morango', 'banana']
+
+        return (
+            <ul>
+                {frutas.map((frutas, index) => (
+                    <li key={index}>{frutas}</li>
+                ))}
+            </ul>
+        )
     }
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder='nome' onChange={(e) => setNome(e.target.value)}/>
-            <input type="text" placeholder='E-mail' onChange={(e) => setEmail(e.target.value)}/>
-            <button type='submit'>Eviar</button>
-        </form>
-    )
-}
+
 
 export default App;
