@@ -32,15 +32,16 @@ function App() {
     //         <button type='submit'>Eviar</button>
     //     </form>
     // )
-    const frutas = ['maca', 'pera', 'morango', 'banana']
+    // const frutas = ['maca', 'pera', 'morango', 'banana']
 
-        return (
-            <ul>
-                {frutas.map((frutas, index) => (
-                    <li key={index}>{frutas}</li>
-                ))}
-            </ul>
-        )
+    //     return (
+    //         <ul>
+    //             {frutas.map((frutas, index) => (
+    //                 <li key={index}>{frutas}</li>
+    //             ))}
+    //         </ul>
+    //     )
+        const [nome, setNome] = useState('')
     }
 
 
