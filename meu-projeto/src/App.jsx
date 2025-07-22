@@ -42,6 +42,7 @@ function App() {
     //         </ul>
     //     )
         const [nome, setNome] = useState('')
+        const [email, setEmail] = useState('')
     }
 
 
