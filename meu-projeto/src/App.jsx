@@ -43,6 +43,10 @@ function App() {
     //     )
         const [nome, setNome] = useState('')
         const [email, setEmail] = useState('')
+
+        function handleSubmit(e) {
+            e.preventDefault()
+        }
     }
 
 
