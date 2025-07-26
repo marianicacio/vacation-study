@@ -41,22 +41,45 @@ function App() {
     //             ))}
     //         </ul>
     //     )
-        const [nome, setNome] = useState('')
-        const [email, setEmail] = useState('')
+        // const [nome, setNome] = useState('')
+        // const [email, setEmail] = useState('')
 
-        function handleSubmit(e) {
+        // function handleSubmit(e) {
+        //     e.preventDefault()
+        //     alert(`Nome: ${nome}\nEmail: ${email}`)
+        // }
+
+        // return (
+        //     <div>
+        // <h1>formulario</h1>
+        //     <form onSubmit={handleSubmit}>
+        //         <input type="text" placeholder='Nome' value={nome} onChange={(e) => setNome(e.target.value)} />
+        //           <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+        //           <button type='submit'>Enviar</button>
+        //     </form>
+        //     </div>
+        // )
+        const [tarefa, setTarefa] = useState('')
+        const [lista, setLista] = useState('')
+
+        function adicionarTarefa(e) {
             e.preventDefault()
-            alert(`Nome: ${nome}\nEmail: ${email}`)
+            if (tarefa.trim() === '') return
+            setLista([...lista, { id: Date.now(), texto: tarefa }])
+            setTarefa('')
         }
 
         return (
             <div>
-        <h1>formulario</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder='Nome' value={nome} onChange={(e) => setNome(e.target.value)} />
-                  <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                  <button type='submit'>Enviar</button>
-            </form>
+                <form onSubmit={adicionarTarefa}>
+                    <input type="text" value={tarefa} onChange={(e) => setTarefa(e.target.value)} placeholder='Digite uma tarefa'/>
+                    <button type='submit'>Adicionar</button>
+                </form>
+                <ul>
+                    {lista.localeCompare((item) => (
+                        <li key={item.id}>{item.texto}</li>
+                    ))}
+                </ul>
             </div>
         )
     }
