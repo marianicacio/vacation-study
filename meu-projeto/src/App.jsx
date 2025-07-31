@@ -6,6 +6,7 @@
 // import Produto from './produto';
 import { useEffect, useState } from 'react';
 import './App.css';
+import Agenda from './pages/agenda'; '../src/pages/agenda'
 
 function App() {
     //   const [contador, setContador] = useState(0)
@@ -59,51 +60,56 @@ function App() {
     //     </form>
     //     </div>
     // )
-    const [tarefa, setTarefa] = useState('')
-    const [lista, setLista] = useState([])
+    // const [tarefa, setTarefa] = useState('')
+    // const [lista, setLista] = useState([])
 
-    useEffect(() => {
-        const tarefasSalvas = localStorage.getItem('tarefas')
-        if (tarefasSalvas) {
-            setLista(JSON.parse(tarefasSalvas))
-        }
-    }, [])
+    // useEffect(() => {
+    //     const tarefasSalvas = localStorage.getItem('tarefas')
+    //     if (tarefasSalvas) {
+    //         setLista(JSON.parse(tarefasSalvas))
+    //     }
+    // }, [])
 
-    useEffect(() => {
-        localStorage.setItem('tarefas', JSON.stringify(lista))
-    }, [lista])
+    // useEffect(() => {
+    //     localStorage.setItem('tarefas', JSON.stringify(lista))
+    // }, [lista])
 
-    function adicionarTarefa(e) {
-        e.preventDefault()
-        if (tarefa.trim() === '') return
-        const novaTarefa = {
-            id: Date.now(),
-            texto: tarefa,
-        }
+    // function adicionarTarefa(e) {
+    //     e.preventDefault()
+    //     if (tarefa.trim() === '') return
+    //     const novaTarefa = {
+    //         id: Date.now(),
+    //         texto: tarefa,
+    //     }
 
-        setLista([...lista, novaTarefa])
-        setTarefa('')
-    }
+    //     setLista([...lista, novaTarefa])
+    //     setTarefa('')
+    // }
 
-    function removerTarefa(id) {
-        const novaLista = lista.filter((item) => item.id !== id)
-        setLista(novaLista)
-    }
+    // function removerTarefa(id) {
+    //     const novaLista = lista.filter((item) => item.id !== id)
+    //     setLista(novaLista)
+    // }
 
     return (
-        <div>
-            <form onSubmit={adicionarTarefa}>
-                <input type="text" value={tarefa} onChange={(e) => setTarefa(e.target.value)} placeholder='Digite uma tarefa' />
-                <button type='submit'>Adicionar</button>
-            </form>
-            <ul>
-                {lista.map((item) => (
-                    <li key={item.id}>{item.texto}
-                        <button onClick={() => removerTarefa(item.id)}>❌</button>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        // <div>
+        //     <body>
+        //         <form onSubmit={adicionarTarefa}>
+        //             <input type="text" value={tarefa} onChange={(e) => setTarefa(e.target.value)} placeholder='Digite uma tarefa' />
+        //             <button type='submit'>Adicionar</button>
+        //         </form>
+        //         <ul>
+        //             {lista.map((item) => (
+        //                 <li key={item.id}>{item.texto}
+        //                     <button onClick={() => removerTarefa(item.id)}>❌</button>
+        //                 </li>
+        //             ))}
+        //         </ul>
+        //     </body>
+        // </div>
+
+        <Agenda/>
+
     )
 }
 
