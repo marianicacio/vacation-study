@@ -4,7 +4,46 @@
     box-sizing: border-box;
 }
 
-body {
+div {
+    background-color: #bacca467;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
+    justify-self: center;
+}
+
+form input {
+    height: 30px;
+    padding-left: 3px;
+}
+
+form button {
+    width: 200px;
+    background-color: #0a516d;
+    border: none;
+    height: 30px;
+    color: white;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 1%;
+}
+
+ul li {
+    display: flex;
+    gap: 50px;
+    list-style-type: disc;
 }

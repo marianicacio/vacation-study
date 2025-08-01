@@ -4,9 +4,9 @@
 // import Titulo from './titulo';
 // import Usuario from './usuario';
 // import Produto from './produto';
-import { useEffect, useState } from 'react';
 import './App.css';
-import Agenda from './pages/agenda'; '../src/pages/agenda'
+import Agenda from './pages/agenda';
+
 
 function App() {
     //   const [contador, setContador] = useState(0)
