@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./style.css";
-import {logo} from "../../assets/images/";
+import logo from "../../assets/images/logo.svg";
 
 export default function Agenda() {
     const [tarefa, setTarefa] = useState(''); // Hooks dentro do componente
