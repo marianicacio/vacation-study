@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "./style.css";
-import logo from "../../assets/images/logo.svg";
+// import logoSmall from "../../../src/assets/images/logo-small.svg";
+import logo from "../../assets/images/logo.png"
+
+
 
 export default function Agenda() {
     const [tarefa, setTarefa] = useState(''); // Hooks dentro do componente
@@ -36,16 +39,19 @@ export default function Agenda() {
 
     return (
         <div>
-            <img src={logo} alt="" />
-                <form onSubmit={adicionarTarefa}>
-                    <input
-                        type="text"
-                        value={tarefa}
-                        onChange={(e) => setTarefa(e.target.value)}
-                        placeholder="Digite uma tarefa"
-                    />
-                    <button type="submit">Adicionar</button>
-                </form>
+            <main>
+                <section>
+                    <img src={logo} alt="" />
+                    <form onSubmit={adicionarTarefa}>
+                        <input
+                            type="text"
+                            value={tarefa}
+                            onChange={(e) => setTarefa(e.target.value)}
+                            placeholder="Digite uma tarefa"
+                        />
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </section>
                 <ul>
                     {lista.map((item) => (
                         <li key={item.id}>
@@ -54,6 +60,7 @@ export default function Agenda() {
                         </li>
                     ))}
                 </ul>
+            </main>
         </div>
     );
 }
