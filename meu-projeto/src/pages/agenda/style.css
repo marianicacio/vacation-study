@@ -18,12 +18,11 @@ main {
 }
 
 section {
-    background-image: url(https://i.pinimg.com/736x/8f/63/26/8f632616c0838e5b0cfa1db1a7a7e5fb.jpg);
+    background-image: url('./../../assets/images/background.svg');
     background-size: cover;
-
     padding: 100px 150px;
     height: 100%;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); */
 }
 
 form {

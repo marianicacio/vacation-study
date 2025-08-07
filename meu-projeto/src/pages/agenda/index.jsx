@@ -41,7 +41,6 @@ export default function Agenda() {
         <div>
             <main>
                 <section>
-                    <img src={logo} alt="" />
                     <form onSubmit={adicionarTarefa}>
                         <input
                             type="text"
